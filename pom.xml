@@ -16,6 +16,13 @@
 
     <dependencies>
         <!-- Add your project dependencies here -->
+        <!-- Example: Servlet API for a basic web application -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -32,19 +39,16 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven JAR Plugin -->
+            <!-- Maven War Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
                 <configuration>
-                    <!-- Specify the main class if your JAR is executable -->
-                    <!-- <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>com.example.MainClass</mainClass>
-                        </manifest>
-                    </archive> -->
+                    <!-- Specify the directory containing your web application files -->
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <!-- Optionally, specify the context root for your application -->
+                    <!-- <warName>custom-war-name</warName> -->
                 </configuration>
             </plugin>
         </plugins>
