@@ -46,7 +46,7 @@
                 <version>3.2.3</version>
                 <configuration>
                     <!-- Specify the WebContent directory where your web resources are located -->
-                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <warSourceDirectory>main/webapp</warSourceDirectory>
                     <!-- Optionally specify the name of the WAR file -->
                     <warName>webapp</warName>
                 </configuration>
